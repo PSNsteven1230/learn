@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2f80ed" />
+  <title>LetsLearn Reading Tool</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-fun" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="blob b4"></span>
+  </div>
+
+  <aside class="left-toggle card">
+    <label class="toggle-row" for="slowModeToggle">
+      <input id="slowModeToggle" type="checkbox" />
+      Slow Read
+    </label>
+  </aside>
+
+  <main class="app">
+    <header class="header">
+      <p class="kicker">Play. Read. Grow.</p>
+      <h1>LetsLearn Reading</h1>
+      <p>Interactive reading practice with visuals and voice support.</p>
+    </header>
+
+    <section class="controls card">
+      <label for="profileSelect">Child Profile</label>
+      <select id="profileSelect" aria-label="Child Profile"></select>
+      <div class="actions">
+        <button id="newProfileBtn">New Profile</button>
+        <button id="renameProfileBtn" class="secondary">Rename</button>
+      </div>
+    </section>
+
+    <section class="controls card">
+      <h2>Parent Dashboard</h2>
+      <p id="dashboardSummary">No profile selected yet.</p>
+      <p id="dashboardStats"></p>
+      <p id="dashboardFocus"></p>
+    </section>
+
+    <section class="controls card">
+      <label for="gradeSelect">Grade Level</label>
+      <select id="gradeSelect" aria-label="Grade Level"></select>
+
+      <label for="lessonSelect">Set</label>
+      <select id="lessonSelect" aria-label="Set"></select>
+
+      <button id="startBtn">Start Learning</button>
+    </section>
+
+    <section id="practiceCard" class="practice card hidden" aria-live="polite">
+      <div class="progress-row">
+        <p id="lessonInfo"></p>
+        <p id="wordCounter"></p>
+      </div>
+      <div class="meter" aria-hidden="true">
+        <div id="progressFill" class="meter-fill"></div>
+      </div>
+
+      <div class="image-box">
+        <img id="wordImage" alt="Visual hint for word" />
+        <p id="imageFallback" class="image-fallback hidden" aria-hidden="true"></p>
+      </div>
+
+      <div class="word-box" id="wordDisplay">cat</div>
+
+      <p id="sentencePrompt" class="sentence-prompt">Sentence: The cat is here.</p>
+
+      <section class="breakdown-box" aria-live="polite">
+        <p><strong>Syllables:</strong> <span id="syllableBreakdown"></span></p>
+        <p><strong>Sound Chunks:</strong> <span id="phonicsBreakdown"></span></p>
+        <p><strong>Letters:</strong> <span id="letterBreakdown"></span></p>
+      </section>
+
+      <div class="actions">
+        <button id="speakBtn" class="secondary">Hear Word</button>
+        <button id="practiceBtn" class="warn">Need Practice</button>
+        <button id="correctBtn" class="good">Correct</button>
+      </div>
+
+      <p class="helper">Use <strong>Need Practice</strong> if missed. Otherwise each set completes after the 10 base words.</p>
+    </section>
+
+    <section id="resultCard" class="result card hidden">
+      <h2 id="resultTitle">Set Complete!</h2>
+      <p id="resultText"></p>
+      <div class="actions">
+        <button id="continueBtn" class="good">Continue Next Set</button>
+        <button id="redoLessonBtn">Redo This Set</button>
+        <button id="newLessonBtn">Choose Another Set</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="celebrate" class="celebrate" aria-hidden="true">
+    <span>⭐</span><span>🌟</span><span>🎉</span><span>✨</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
