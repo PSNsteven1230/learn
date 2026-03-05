@@ -16,11 +16,25 @@
     <span class="blob b4"></span>
   </div>
 
-  <aside class="left-toggle card">
-    <label class="toggle-row" for="slowModeToggle">
-      <input id="slowModeToggle" type="checkbox" />
-      Slow Read
-    </label>
+  <aside class="side-rail">
+    <section class="left-toggle card">
+      <label class="toggle-row" for="slowModeToggle">
+        <input id="slowModeToggle" type="checkbox" />
+        Slow Read
+      </label>
+    </section>
+
+    <section id="parentSidebar" class="parent-sidebar card">
+      <div class="parent-head">
+        <h2>Parent Dashboard</h2>
+        <button id="toggleParentBtn" class="secondary" aria-label="Toggle Parent Dashboard">Close</button>
+      </div>
+      <div id="parentContent" class="parent-content">
+        <p id="dashboardSummary">No profile selected yet.</p>
+        <p id="dashboardStats"></p>
+        <p id="dashboardFocus"></p>
+      </div>
+    </section>
   </aside>
 
   <main class="app">
@@ -30,31 +44,26 @@
       <p>Interactive reading practice with visuals and voice support.</p>
     </header>
 
-    <section class="controls card">
-      <label for="profileSelect">Child Profile</label>
-      <select id="profileSelect" aria-label="Child Profile"></select>
-      <div class="actions">
-        <button id="newProfileBtn">New Profile</button>
-        <button id="renameProfileBtn" class="secondary">Rename</button>
-      </div>
-    </section>
+    <aside class="right-panel">
+      <section class="controls card">
+        <label for="profileSelect">Child Profile</label>
+        <select id="profileSelect" aria-label="Child Profile"></select>
+        <div class="actions">
+          <button id="newProfileBtn">New Profile</button>
+          <button id="renameProfileBtn" class="secondary">Rename</button>
+        </div>
+      </section>
 
-    <section class="controls card">
-      <h2>Parent Dashboard</h2>
-      <p id="dashboardSummary">No profile selected yet.</p>
-      <p id="dashboardStats"></p>
-      <p id="dashboardFocus"></p>
-    </section>
+      <section class="controls card">
+        <label for="gradeSelect">Grade Level</label>
+        <select id="gradeSelect" aria-label="Grade Level"></select>
 
-    <section class="controls card">
-      <label for="gradeSelect">Grade Level</label>
-      <select id="gradeSelect" aria-label="Grade Level"></select>
+        <label for="lessonSelect">Set</label>
+        <select id="lessonSelect" aria-label="Set"></select>
 
-      <label for="lessonSelect">Set</label>
-      <select id="lessonSelect" aria-label="Set"></select>
-
-      <button id="startBtn">Start Learning</button>
-    </section>
+        <button id="startBtn">Start Learning</button>
+      </section>
+    </aside>
 
     <section id="practiceCard" class="practice card hidden" aria-live="polite">
       <div class="progress-row">

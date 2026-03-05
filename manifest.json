@@ -1,0 +1,10 @@
+{
+  "name": "LetsLearn Reading",
+  "short_name": "LetsLearn",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f9fcff",
+  "theme_color": "#2f80ed",
+  "description": "Web-based reading practice for early learners.",
+  "lang": "en-US"
+}
